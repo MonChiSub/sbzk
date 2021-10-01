@@ -10,9 +10,8 @@ class MonkeyTests {
     @Test
     @DisplayName("Testing of object string")
     void getObject() {
-        Monkey m = new Monkey("Monke", "Capuchin", 5, false);
-        assertEquals("Monke is a breed of Capuchin. Monke was born on " + LocalDate.now().minusYears(5) + "." + " Monke's hungry status is currently false." , m.toString(), "Object to string method is incorrect");
-        //this.name + " is a breed of " + this.breed + ". " + this.name + " was born on " + this.dateOfBirth + "." + this.name + "'s hungry status is: " + this.isHungry;
+        Monkey testMonkey = new Monkey();
+        assertEquals("{\"name\"=  \"Monke\", \"breed\"=\"Unknown Breed\", \"date of birth\"=\""+LocalDate.now()+"\", \"hungry\"=\"true\"}" , testMonkey.toString(), "Object to string method is incorrect");
     }
 
     @Test
@@ -71,5 +70,33 @@ class MonkeyTests {
         assertEquals("is hungry and eats a banana", m.eat());
         Monkey c = new Monkey("Monke", "Capuchin", 5, false);
         assertEquals("is not hungry to eat", c.eat());
+    }
+
+    @Test
+    @DisplayName("Test of die")
+    void testDie() {
+        Monkey testMonkey = new Monkey();
+        assertEquals("i have died.", testMonkey.die());
+    }
+
+    @Test
+    @DisplayName("Testing of reproduce")
+    void testReproduce() {
+        Monkey testMonkey = new Monkey();
+        assertEquals("Perform a live birth", testMonkey.reproduce());
+    }
+
+    @Test
+    @DisplayName("Testing of breathe")
+    void testBreathe() {
+        Monkey testMonkey = new Monkey();
+        assertEquals("Inhale... Exhale...", testMonkey.breathe());
+    }
+
+    @Test
+    @DisplayName("Test of sleep")
+    void testSleep() {
+        Monkey testMonkey = new Monkey();
+        assertEquals("i have fallen asleep", testMonkey.sleep());
     }
 }

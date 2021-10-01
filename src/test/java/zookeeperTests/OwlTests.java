@@ -41,4 +41,13 @@ class OwlTests {
         assertEquals(true, o.canFly(), "Returned incorrect boolean");
         assertEquals("Owl goes for a fly", o.fly(), "Can owl fly status returned wrong");
     }
+
+    @Test
+    @DisplayName("Owl eating test")
+    void testOwlEat() {
+        Owl testOwl = new Owl();
+        testOwl.setFlyEnergy(74);
+        assertEquals("Bert has eaten a worm.", testOwl.eat());
+        assertEquals(79, testOwl.getFlyEnergy(), "Owl returned with wrong fly energy.");
+    }
 }

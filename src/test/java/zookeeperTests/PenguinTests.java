@@ -22,4 +22,19 @@ public class PenguinTests {
         testPenguin.setBreed("Unknown Breed aaaaa");
         assertEquals("Unknown Breed aaaaa", testPenguin.getBreed());
     }
+
+    @Test
+    @DisplayName("Test for penguin eat method")
+    void testEat() {
+        Penguin testPenguin = new Penguin();
+        assertEquals("Jeffo eats a fish", testPenguin.eat(), "String return was incorrect");
+        assertEquals(1, testPenguin.getAge(), "Penguin returned with the wrong age");
+    }
+
+    @Test
+    @DisplayName("Testing the toString method of penguin")
+    void testToString() {
+        Penguin testPenguin = new Penguin();
+        assertEquals("{\"name\"=  \"Jeffo\", \"breed\"=\"Unknown\", \"date of birth\"=\"0\"}", testPenguin.toString());
+    }
 }

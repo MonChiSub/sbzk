@@ -68,21 +68,4 @@ public class CucumberTests {
     public void penguinSquawk(String doesPenguinSquawkLoud) {
         assertEquals(doesPenguinSquawkLoud, testPenguin.squawk());
     }
-
-
-    /**
-     * Test method class for cucumber tests
-     * New class implementation for a static class
-     */
-    static class TestMethods {
-        static String canOwlFly(String canFly) {
-            String fly = "";
-            if (canFly.equals("true")) {
-                fly = "fly";
-            } else if (canFly.equals("false")) {
-                fly = "not fly";
-            }
-            return fly;
-        }
-    }
 }

@@ -13,11 +13,10 @@ public abstract class Animal {
     public abstract String reproduce();
 
     public String sleep() {
-        //return Object.class.getName() + " has fallen asleep";
-        return getClass().getName() + " has fallen asleep";
+        return "i have fallen asleep";
     }
 
     public String die() {
-        return "The animal has died.";
+        return "i have died.";
     }
 }
