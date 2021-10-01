@@ -1,4 +1,4 @@
-package zookeeper;
+package com.softwareinstitute.filmLibrary.zookeeper;
 
 public class Penguin extends Bird {
     //Variables

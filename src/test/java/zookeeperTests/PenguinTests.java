@@ -3,7 +3,7 @@ package zookeeperTests;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import zookeeper.Penguin;
+import com.softwareinstitute.filmLibrary.zookeeper.Penguin;
 
 public class PenguinTests {
 

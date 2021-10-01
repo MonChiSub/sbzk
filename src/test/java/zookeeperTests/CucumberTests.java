@@ -1,8 +1,8 @@
 package zookeeperTests;
 
-import zookeeper.Penguin;
-import zookeeper.Owl;
-import zookeeper.Monkey;
+import com.softwareinstitute.filmLibrary.zookeeper.Penguin;
+import com.softwareinstitute.filmLibrary.zookeeper.Owl;
+import com.softwareinstitute.filmLibrary.zookeeper.Monkey;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

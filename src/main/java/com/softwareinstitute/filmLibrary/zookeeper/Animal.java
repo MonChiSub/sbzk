@@ -1,9 +1,17 @@
-package zookeeper;
+package com.softwareinstitute.filmLibrary.zookeeper;
+
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Animal {
     //Variables
 
     //Constructor
+    public Animal() {
+
+    }
 
     //Methods
     public abstract String breathe();

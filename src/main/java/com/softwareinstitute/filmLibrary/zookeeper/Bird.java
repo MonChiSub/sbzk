@@ -1,12 +1,6 @@
-package zookeeper;
+package com.softwareinstitute.filmLibrary.zookeeper;
 
-public abstract class Mammal extends Animal {
-    //Attributes
-
-
-    //Constructor
-
-
+public abstract class Bird extends Animal {
     //Methods
     public String breathe(){
         return "Inhale... Exhale...";
@@ -14,6 +8,6 @@ public abstract class Mammal extends Animal {
 
     @Override
     public String reproduce() {
-        return "Perform a live birth";
+        return "lay an egg";
     }
 }
