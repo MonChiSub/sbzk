@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TempController {
 
-    @RequestMapping(path="/testGreeting")
+    @RequestMapping(path="/testGreeting", method=RequestMethod.POST)
     public String getGreeting() {
         return "Hi, this is a test";
     }

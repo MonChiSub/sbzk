@@ -24,7 +24,7 @@ public class PenguinController {
         return this.penguinList;
     }
 
-    @RequestMapping(path="/")
+    @RequestMapping(path="/", method=RequestMethod.POST)
     public String toString() {
         String json = new Gson().toJson(penguinList);
         return json;
