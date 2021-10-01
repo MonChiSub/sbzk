@@ -56,6 +56,14 @@ public class Owl extends Bird {
         canFly();
     }
 
+    public boolean isCanFly() {
+        return canFly;
+    }
+
+    public void setCanFly(boolean canFly) {
+        this.canFly = canFly;
+    }
+
     public boolean canFly() {
         if(getFlyEnergy() >= 75) {
             this.canFly = true;

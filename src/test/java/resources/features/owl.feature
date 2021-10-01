@@ -3,10 +3,10 @@ Feature: Owl flies when energy is high enough
 
   Scenario: Owl has enough energy, so it flies.
     Given owl can fly is "true"
-    When owl wants to fly
-    Then owl will "fly"
+    When owl energy is 75
+    Then owl will "Owl goes for a fly"
 
   Scenario: Owl has no energy, so it cannot fly.
     Given owl can fly is "false"
-    When owl wants to fly
-    Then owl will "not fly"
+    When owl energy is 74
+    Then owl will "Owl cannot fly, energy too low."

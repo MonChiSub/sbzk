@@ -1,5 +1,6 @@
 package zookeeperTests;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,6 +22,14 @@ class OwlTests {
         Owl o = new Owl();
         o.setBreed("Snow Owl");
         assertEquals("Snow Owl", o.getBreed(), "Returned incorrect breed.");
+    }
+
+    @Test
+    @DisplayName("Get owl canFly status")
+    void testSetGetCanFly() {
+        Owl o = new Owl();
+        o.setCanFly(true);
+        assertEquals(true, o.isCanFly());
     }
 
     @Test

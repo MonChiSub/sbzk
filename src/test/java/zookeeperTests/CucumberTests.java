@@ -14,6 +14,8 @@ public class CucumberTests {
      *  Cucumber testing section
      */
     public Monkey testMonkey = new Monkey();
+    public Owl testOwl = new Owl();
+    public Penguin testPenguin = new Penguin();
 
     @Given("monkey hungry is {string}")
     public void isMonkeyHungry(String pIsHungry) {
@@ -34,40 +36,37 @@ public class CucumberTests {
     /** OWL CAN FLY STORY
      *  Cucumber testing section
      */
-    private String canFly;
-    private String doesOwlFlyResult;
-
     @Given("owl can fly is {string}")
     public void canOwlFly(String pCanFly) {
-        canFly = pCanFly;
+        boolean stringToBoolean = Boolean.parseBoolean(pCanFly);
+        testOwl.setCanFly(stringToBoolean);
     }
 
-    @When("owl wants to fly")
-    public void owlWantsToFly() {
-        doesOwlFlyResult = TestMethods.canOwlFly(canFly);
+    @When("owl energy is {int}")
+    public void owlWantsToFly(int pEnergy) {
+        testOwl.setFlyEnergy(pEnergy);
     }
 
     @Then("owl will {string}")
     public void owlWillFly(String doesOwlActuallyFly) {
-        assertEquals(doesOwlActuallyFly, doesOwlFlyResult);
+        assertEquals(doesOwlActuallyFly, testOwl.fly());
+        assertEquals(true, testOwl.isCanFly());
     }
 
     //Penguin squawk story
-    private int age;
-    private String canSquawkLoud;
     @Given("penguin is aged {int}")
     public void penguinOverAgeSquawk(int pAge) {
-        age = pAge;
+        testPenguin.setAge(pAge);
     }
 
     @When("the penguin wants to squawk")
     public void penguinWhenSquawk() {
-        canSquawkLoud = TestMethods.canSquawk(age);
+        testPenguin.getAge();
     }
 
     @Then("penguin will {string}")
     public void penguinSquawk(String doesPenguinSquawkLoud) {
-        assertEquals(doesPenguinSquawkLoud, canSquawkLoud);
+        assertEquals(doesPenguinSquawkLoud, testPenguin.squawk());
     }
 
 
@@ -84,16 +83,6 @@ public class CucumberTests {
                 fly = "not fly";
             }
             return fly;
-        }
-
-        static String canSquawk(int pAge) {
-            String canSquawk;
-            if(pAge >= 3) {
-                canSquawk = "SQUAWK!!!";
-            } else {
-                canSquawk = "squawk...";
-            }
-            return canSquawk;
         }
     }
 }
