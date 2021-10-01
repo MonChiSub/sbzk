@@ -23,7 +23,7 @@ public class CucumberTests {
 
     @When("monkey is hungry")
     public void monkeyGivenFood() {
-        boolean isMonkeyHungry = testMonkey.getIsHungry();
+        testMonkey.getIsHungry();
     }
 
     @Then("monkey {string}")

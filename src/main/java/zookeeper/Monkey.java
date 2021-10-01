@@ -51,10 +51,11 @@ public class Monkey extends Mammal {
     }
 
     /** Class Methods Below
-     * @return name Returns the cat's name.
+     * @return name Returns the monkey's details.
      */
     public String toString() {
-        return this.name + " is a breed of " + this.breed + ". " + this.name + " was born on " + this.dateOfBirth + ". " + this.name + "'s hungry status is currently " + this.isHungry + ".";
+        return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
+                "\", \"date of birth\"=\"" + this.dateOfBirth + "\", \"hungry\"=\"" + this.isHungry + "\"}";
     }
 
     public void setName(String pName) {
@@ -116,9 +117,5 @@ public class Monkey extends Mammal {
             i++;
         }
         return medicalHistoryReturn;
-    }
-
-    public String testMethod() {
-        return "hello, this is a test.";
     }
 }

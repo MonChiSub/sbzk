@@ -25,6 +25,11 @@ public class Penguin extends Bird {
     }
 
     //Methods
+    public String toString() {
+        return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
+                "\", \"date of birth\"=\"" + this.age + "\"}";
+    }
+
     @Override
     public String eat() {
         if(age <= 12) {

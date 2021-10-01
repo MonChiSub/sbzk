@@ -26,6 +26,11 @@ public class Owl extends Bird {
     }
 
     //Methods
+    public String toString() {
+        return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
+                "\", \"fly energy\"=\"" + this.flyEnergy + "\", \"canFly\"=\"" + this.canFly + "\"}";
+    }
+
     public String getName() {
         return name;
     }

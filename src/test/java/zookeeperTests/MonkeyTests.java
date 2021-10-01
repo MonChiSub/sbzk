@@ -72,11 +72,4 @@ class MonkeyTests {
         Monkey c = new Monkey("Monke", "Capuchin", 5, false);
         assertEquals("is not hungry to eat", c.eat());
     }
-
-    @Test
-    @DisplayName("Test of test method")
-    void testTest() {
-        Monkey m = new Monkey("Monke", "Lion", 5);
-        assertEquals("hello, this is a test.", m.testMethod());
-    }
 }
