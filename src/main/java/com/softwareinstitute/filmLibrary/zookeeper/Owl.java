@@ -23,10 +23,17 @@ public class Owl extends Bird {
         canFly();
     }
 
+    public Owl (String pName, String pBreed, int pFlyEnergy) {
+        this.name = pName;
+        this.breed = pBreed;
+        this.flyEnergy = pFlyEnergy;
+        canFly();
+    }
+
     //Methods
     public String toString() {
         return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
-                "\", \"fly energy\"=\"" + this.flyEnergy + "\", \"canFly\"=\"" + this.canFly + "\"}";
+                "\", \"fly energy\"=\"" + this.flyEnergy + "\", \"canFly\"=\"" + this.canFly + "\"}\n";
     }
 
     public String getName() {

@@ -9,8 +9,7 @@ public class Monkey extends Mammal {
      */
     private String name;
     private String breed;
-    private LocalDate dateOfBirth;
-    private ArrayList<String> medicalHistory = new ArrayList<>();
+//    private ArrayList<String> medicalHistory = new ArrayList<>();
     private boolean isHungry;
 
     /** Class Constructor Below
@@ -25,28 +24,12 @@ public class Monkey extends Mammal {
     }
 
     public Monkey(String pName, String pBreed) {
-        this(pName, pBreed, LocalDate.now());
+        this(pName, pBreed, true);
     }
 
-    public Monkey(String pName, String pBreed, LocalDate dateOfBirth) {
-        this(pName, pBreed, dateOfBirth, true);
-    }
-
-    public Monkey(String pName, String pBreed, int pYears) {
-        this(pName, pBreed, pYears, true);
-    }
-
-    public Monkey(String pName, String pBreed, LocalDate dateOfBirth, boolean hungry) {
+    public Monkey(String pName, String pBreed, boolean hungry) {
         this.name = pName;
         this.breed = pBreed;
-        this.dateOfBirth = dateOfBirth;
-        this.isHungry = hungry;
-    }
-
-    public Monkey(String pName, String pBreed, int pYears, boolean hungry) {
-        this.name = pName;
-        this.breed = pBreed;
-        this.dateOfBirth = LocalDate.now().minusYears(pYears);
         this.isHungry = hungry;
     }
 
@@ -55,7 +38,7 @@ public class Monkey extends Mammal {
      */
     public String toString() {
         return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
-                "\", \"date of birth\"=\"" + this.dateOfBirth + "\", \"hungry\"=\"" + this.isHungry + "\"}";
+                "\", \"hungry\"=\"" + this.isHungry + "\"}\n";
     }
 
     public void setName(String pName) {
@@ -74,14 +57,6 @@ public class Monkey extends Mammal {
         return breed;
     }
 
-    public void setDateOfBirth(LocalDate pDateOfBirth) {
-        this.dateOfBirth = pDateOfBirth;
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
     public boolean getIsHungry() {
         return isHungry;
     }
@@ -98,24 +73,24 @@ public class Monkey extends Mammal {
         }
     }
 
-    public void addMedicalNote(String pMedicalNote) {
-        medicalHistory.add(pMedicalNote.toLowerCase());
-    }
-
-    public void removeMedicalNote(String pMessage) {
-        medicalHistory.remove(pMessage.toLowerCase());
-    }
-
-    public String getMedicalRecord() {
-        String medicalHistoryReturn = "";
-        int i = 1;
-        if (medicalHistory.isEmpty()) {
-            medicalHistoryReturn = "No medical history found for " + this.name;
-        }
-        for (String medicalNote : medicalHistory) {
-            medicalHistoryReturn += this.name + "'s" + " Medical Note " + i + ": " + medicalNote + "\n";
-            i++;
-        }
-        return medicalHistoryReturn;
-    }
+//    public void addMedicalNote(String pMedicalNote) {
+//        medicalHistory.add(pMedicalNote.toLowerCase());
+//    }
+//
+//    public void removeMedicalNote(String pMessage) {
+//        medicalHistory.remove(pMessage.toLowerCase());
+//    }
+//
+//    public String getMedicalRecord() {
+//        String medicalHistoryReturn = "";
+//        int i = 1;
+//        if (medicalHistory.isEmpty()) {
+//            medicalHistoryReturn = "No medical history found for " + this.name;
+//        }
+//        for (String medicalNote : medicalHistory) {
+//            medicalHistoryReturn += this.name + "'s" + " Medical Note " + i + ": " + medicalNote + "\n";
+//            i++;
+//        }
+//        return medicalHistoryReturn;
+//    }
 }

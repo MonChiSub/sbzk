@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>springboot test</title>
+</head>
+<body>
+
+    <h3>Create and Add to Zoo!</h3>
+    <form action = "/createZoo" method="GET">
+        <div id="animalForm">
+            <label for="viewZoo">View zoo --> </label>
+            <button id="viewZoo">View Zoo</button>
+        </div>
+    </form> <br/>
+
+    <h3>Add a new COOL monkey!!!!!!</h3>
+    <form action = "/addMonkey" method="POST">
+        <div id="addingAMonkey">
+            <label for="pNameMonkey">Name:  </label>
+            <input name="pName" placeholder="Bobo" id="pNameMonkey">
+            <br/>
+            <label for="pBreedMonkey">Breed:  </label>
+            <input name="pBreed" placeholder="Baboon" id="pBreedMonkey">
+            <br/>
+            <label for="pIsHungryMonkey">Hungry: </label>
+            <input name="pIsHungry" placeholder="true" id="pIsHungryMonkey">
+            <br/>
+            <button>Add Monkey</button>
+        </div>
+    </form>
+
+    <h3>Add a new COOL owl!!!!!!</h3>
+    <form action = "/addOwl" method="POST">
+        <div id="addingAOwl">
+            <label for="pNameOwl">Name: </label>
+            <input name="pName" placeholder="Bert" id="pNameOwl">
+            <br/>
+            <label for="pBreedOwl">Breed: </label>
+            <input name="pBreed" placeholder="Small Owl" id="pBreedOwl">
+            <br/>
+            <button>Add Owl</button>
+        </div>
+    </form>
+
+    <h3>Add a new COOL penguin!!!!!!</h3>
+    <form action = "/addPenguin" method="POST">
+        <div id="addingAPenguin">
+            <label for="pNamePenguin">Name: </label>
+            <input name="pName" placeholder="Blizzard" id="pNamePenguin">
+            <br/>
+            <label for="pBreedPenguin">Breed: </label>
+            <input name="pBreed" placeholder="Fairy Penguin" id="pBreedPenguin">
+            <br/>
+            <label for="pAgePenguin">Age:   </label>
+            <input name="pAge" placeholder="3" id="pAgePenguin">
+            <br/>
+            <button>Add Penguin</button>
+        </div>
+    </form>
+
+    <h3>Get Monkeys</h3>
+    <form action = "/monkeySelect" method="GET">
+        <div id="monkeyGetTestYoHaHaHaHa">
+            <button>Get Monkey</button>
+        </div>
+    </form>
+
+    <h3>Get Owls</h3>
+    <form action = "/owlSelect" method="GET">
+        <div id="owlGetTestYoHaHaHaHa">
+            <button>Get Owl</button>
+        </div>
+    </form>
+
+    <h3>Get Penguins</h3>
+    <form action = "/penguinSelect" method="GET">
+        <div id="penguinGetTestYoHaHaHaHa">
+            <button>Get Penguin</button>
+        </div>
+    </form>
+</body>
+</html>

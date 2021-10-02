@@ -27,7 +27,7 @@ public class Penguin extends Bird {
     //Methods
     public String toString() {
         return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
-                "\", \"date of birth\"=\"" + this.age + "\"}";
+                "\", \"age of penguin\"=\"" + this.age + "\"}\n";
     }
 
     public String getName() {
