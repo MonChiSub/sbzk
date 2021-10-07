@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Zoo {
     private List<Animal> listOfAnimals = new ArrayList<>();
+    private List<Animal> monkeyList = new ArrayList<>();
 
     public Zoo() {
         this.listOfAnimals.add(new Monkey("Bobo", "Capuchin", true));
@@ -17,6 +18,13 @@ public class Zoo {
 
     public List<Animal> getListOfAnimals() {
         return this.listOfAnimals;
+    }
+
+    public String getMonkeys() {
+        for(Animal c : listOfAnimals) {
+            monkeyList.add(c);
+        }
+        return monkeyList.toString();
     }
 
     public String toString() {

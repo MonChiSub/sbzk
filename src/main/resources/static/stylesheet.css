@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Macaca_nigra_self-portrait_large.jpg/1200px-Macaca_nigra_self-portrait_large.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color:white;
+}
+
+label {
+    color: white;
+}
