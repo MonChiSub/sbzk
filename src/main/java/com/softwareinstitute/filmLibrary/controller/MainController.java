@@ -22,7 +22,7 @@ public class MainController {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
         for(Animal a : listOfAnimals) {
-            if(a.getClass().equals("Monkey")) {
+            if(a.getClass().getName().contains("Monkey")) {
                 newListOfAnimals.add(a);
             }
         }
@@ -33,19 +33,26 @@ public class MainController {
     @RequestMapping(path="/owlSelect", method=RequestMethod.GET)
     public String getOwl() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
-
-        Animal animalSelection;
-        animalSelection = listOfAnimals.get(2);
-        String json = new Gson().toJson(animalSelection);
+        List<Animal> newListOfAnimals = new ArrayList<>();
+        for(Animal a : listOfAnimals) {
+            if(a.getClass().getName().contains("Owl")) {
+                newListOfAnimals.add(a);
+            }
+        }
+        String json = new Gson().toJson(newListOfAnimals);
         return json;
     }
 
     @RequestMapping(path="/penguinSelect", method=RequestMethod.GET)
     public String getPenguin() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
-        Animal animalSelection;
-        animalSelection = listOfAnimals.get(3);
-        String json = new Gson().toJson(animalSelection);
+        List<Animal> newListOfAnimals = new ArrayList<>();
+        for(Animal a : listOfAnimals) {
+            if(a.getClass().getName().contains("Penguin")) {
+                newListOfAnimals.add(a);
+            }
+        }
+        String json = new Gson().toJson(newListOfAnimals);
         return json;
     }
 

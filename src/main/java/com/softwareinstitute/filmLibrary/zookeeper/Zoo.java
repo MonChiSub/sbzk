@@ -20,13 +20,6 @@ public class Zoo {
         return this.listOfAnimals;
     }
 
-    public String getMonkeys() {
-        for(Animal c : listOfAnimals) {
-            monkeyList.add(c);
-        }
-        return monkeyList.toString();
-    }
-
     public String toString() {
         String json = new Gson().toJson(listOfAnimals);
         return json;
