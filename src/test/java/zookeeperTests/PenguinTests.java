@@ -27,14 +27,19 @@ class PenguinTests {
     @DisplayName("Test for penguin eat method")
     void testEat() {
         Penguin testPenguin = new Penguin();
-        assertEquals("Jeffo eats a fish", testPenguin.eat(), "String return was incorrect");
+        assertEquals("Pingu eats a fish", testPenguin.eat(), "String return was incorrect");
         assertEquals(1, testPenguin.getAge(), "Penguin returned with the wrong age");
+        //Testing if statement with a false condition (was true for first two assertEqual tests).
+        Penguin newTestPenguin = new Penguin("penguinName","Fairy Penguin",13);
+        assertEquals(13, newTestPenguin.getAge(), "age returned incorrectly.");
+        assertEquals("penguinName eats a fish", newTestPenguin.eat(), "String return was incorrect");
+        assertEquals(13, newTestPenguin.getAge(), "Penguin aged from eating, it should not have.");
     }
 
     @Test
     @DisplayName("Testing the toString method of penguin")
     void testToString() {
-        Penguin testPenguin = new Penguin();
-        assertEquals("{\"name\"=  \"Jeffo\", \"breed\"=\"Unknown\", \"date of birth\"=\"0\"}", testPenguin.toString());
+        Penguin testPenguin = new Penguin("Pingo", "Fairo Penguino", 5);
+        assertEquals("{\"name\"=  \"Pingo\", \"breed\"=\"Fairo Penguino\", \"age of penguin\"=\"5\"}\n", testPenguin.toString());
     }
 }

@@ -8,11 +8,11 @@ public class Penguin extends Bird {
 
     //Constructors
     public Penguin() {
-        this("Jeffo");
+        this("Pingu");
     }
 
     public Penguin(String pName) {
-        this(pName, "Unknown");
+        this(pName, "Fairy Penguin");
     }
 
     public Penguin(String pName, String pBreed) {

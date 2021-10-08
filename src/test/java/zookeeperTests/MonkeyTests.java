@@ -10,7 +10,7 @@ class MonkeyTests {
     @DisplayName("Testing of object string")
     void getObject() {
         Monkey testMonkey = new Monkey();
-        assertEquals("{\"name\"=  \"Monke\", \"breed\"=\"Unknown Breed\", \"hungry\"=\"true\"}" , testMonkey.toString(), "Object to string method is incorrect");
+        assertEquals("{\"name\"=  \"Monke\", \"breed\"=\"Unknown Breed\", \"hungry\"=\"true\"}\n" , testMonkey.toString(), "Object to string method is incorrect");
     }
 
     @Test

@@ -49,4 +49,11 @@ class OwlTests {
         assertEquals("Bert has eaten a worm.", testOwl.eat());
         assertEquals(79, testOwl.getFlyEnergy(), "Owl returned with wrong fly energy.");
     }
+
+    @Test
+    @DisplayName("Owl toString test")
+    void testOwlToString() {
+        Owl testOwl = new Owl("Twito", "Smallo",84);
+        assertEquals("{\"name\"=  \"Twito\", \"breed\"=\"Smallo\", \"fly energy\"=\"84\", \"canFly\"=\"true\"}\n", testOwl.toString(), "Owl to string method returned incorrectly.");
+    }
 }
