@@ -1,7 +1,6 @@
 package zookeeperTests;
 
-import com.softwareinstitute.zookeeper.Penguin;
-import com.softwareinstitute.zookeeper.Owl;
+import com.softwareinstitute.zookeeper.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,10 +48,11 @@ public class CucumberTests {
     @Then("owl will {string}")
     public void owlWillFly(String doesOwlActuallyFly) {
         assertEquals(doesOwlActuallyFly, testOwl.fly());
-        assertEquals(true, testOwl.isCanFly());
     }
 
-    //Penguin squawk story
+    /** PENGUIN IS HUNGRY STORY
+     *  Cucumber testing section
+     */
     @Given("penguin is aged {int}")
     public void penguinOverAgeSquawk(int pAge) {
         testPenguin.setAge(pAge);

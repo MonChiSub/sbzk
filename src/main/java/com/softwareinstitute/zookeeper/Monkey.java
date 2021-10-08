@@ -53,6 +53,7 @@ public class Monkey extends Mammal {
         this.isHungry = pIsHungry;
     }
 
+    @Override
     public String eat() {
         if (this.isHungry) {
             return "is hungry and eats a banana";
