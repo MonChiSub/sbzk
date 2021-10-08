@@ -27,8 +27,7 @@ public class MainController {
                 newListOfAnimals.add(a);
             }
         }
-        String json = new Gson().toJson(newListOfAnimals);
-        return json;
+        return new Gson().toJson(newListOfAnimals);
     }
 
     @GetMapping("/owlSelect")
@@ -40,8 +39,7 @@ public class MainController {
                 newListOfAnimals.add(a);
             }
         }
-        String json = new Gson().toJson(newListOfAnimals);
-        return json;
+        return new Gson().toJson(newListOfAnimals);
     }
 
     @GetMapping("/penguinSelect")
@@ -53,8 +51,7 @@ public class MainController {
                 newListOfAnimals.add(a);
             }
         }
-        String json = new Gson().toJson(newListOfAnimals);
-        return json;
+        return new Gson().toJson(newListOfAnimals);
     }
 
     @PostMapping("/addMonkey")
