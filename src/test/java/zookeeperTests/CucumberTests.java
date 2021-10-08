@@ -14,7 +14,7 @@ public class CucumberTests {
     public Monkey testMonkey = new Monkey();
     public Owl testOwl = new Owl();
     public Penguin testPenguin = new Penguin();
-    
+
     @Given("monkey hungry is {string}")
     public void isMonkeyHungry(String pIsHungry) {
         boolean stringToBoolean = Boolean.parseBoolean(pIsHungry);

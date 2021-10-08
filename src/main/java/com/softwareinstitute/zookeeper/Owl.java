@@ -1,5 +1,7 @@
 package com.softwareinstitute.zookeeper;
 
+import java.util.Random;
+
 public class Owl extends Bird {
 
     private String name;
@@ -16,7 +18,8 @@ public class Owl extends Bird {
     }
 
     public Owl(String pName, String pBreed) {
-        int randomInt = (int) (100.0 * Math.random());
+        Random r = new Random();
+        int randomInt = r.nextInt(100);
         this.flyEnergy = randomInt;
         this.name = pName;
         this.breed = pBreed;

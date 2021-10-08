@@ -2,7 +2,7 @@ package com.softwareinstitute.zookeeper;
 
 public abstract class Animal {
 
-    public Animal() {
+    protected Animal() {
 
     }
 
