@@ -1,4 +1,4 @@
-package com.softwareinstitute.filmLibrary;
+package com.softwareinstitute;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

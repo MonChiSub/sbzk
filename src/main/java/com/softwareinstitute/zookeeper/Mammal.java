@@ -1,14 +1,8 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
+package com.softwareinstitute.zookeeper;
 
 public abstract class Mammal extends Animal {
-    //Attributes
 
-
-    //Constructor
-
-
-    //Methods
-    public String breathe(){
+    public String breathe() {
         return "Inhale... Exhale...";
     }
 

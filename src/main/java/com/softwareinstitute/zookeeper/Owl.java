@@ -1,7 +1,7 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
+package com.softwareinstitute.zookeeper;
 
 public class Owl extends Bird {
-    //Variables
+
     private String name;
     private String breed;
     private int flyEnergy;
@@ -15,22 +15,21 @@ public class Owl extends Bird {
         this(pName, "Unknown Breed");
     }
 
-    public Owl (String pName, String pBreed) {
-        int randomInt = (int)(100.0 * Math.random());
+    public Owl(String pName, String pBreed) {
+        int randomInt = (int) (100.0 * Math.random());
         this.flyEnergy = randomInt;
         this.name = pName;
         this.breed = pBreed;
         canFly();
     }
 
-    public Owl (String pName, String pBreed, int pFlyEnergy) {
+    public Owl(String pName, String pBreed, int pFlyEnergy) {
         this.name = pName;
         this.breed = pBreed;
         this.flyEnergy = pFlyEnergy;
         canFly();
     }
 
-    //Methods
     public String toString() {
         return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
                 "\", \"fly energy\"=\"" + this.flyEnergy + "\", \"canFly\"=\"" + this.canFly + "\"}\n";
@@ -70,7 +69,7 @@ public class Owl extends Bird {
     }
 
     public boolean canFly() {
-        if(getFlyEnergy() >= 75) {
+        if (getFlyEnergy() >= 75) {
             this.canFly = true;
         } else {
             this.canFly = false;
@@ -80,7 +79,7 @@ public class Owl extends Bird {
 
     public String fly() {
         String canOwlFly = "";
-        if(canFly) {
+        if (canFly) {
             canOwlFly = "Owl goes for a fly";
         } else {
             canOwlFly = "Owl cannot fly, energy too low.";
@@ -89,8 +88,9 @@ public class Owl extends Bird {
     }
 
     public String eat() {
-        if(flyEnergy <= 74) {
+        if (flyEnergy <= 74) {
             flyEnergy += 5;
+            canFly();
         }
         return this.name + " has eaten a worm.";
     }

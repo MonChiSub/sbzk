@@ -1,20 +1,11 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
+package com.softwareinstitute.zookeeper;
 
 public class Monkey extends Mammal {
-    /** Class Variables Below
-     *
-     */
+
     private String name;
     private String breed;
-//    private ArrayList<String> medicalHistory = new ArrayList<>();
     private boolean isHungry;
 
-    /** Class Constructor Below
-     *
-     */
     public Monkey() {
         this("Monke");
     }
@@ -33,9 +24,6 @@ public class Monkey extends Mammal {
         this.isHungry = hungry;
     }
 
-    /** Class Methods Below
-     * @return name Returns the monkey's details.
-     */
     public String toString() {
         return "{" + "\"name\"=  \"" + this.name + "\", \"breed\"=\"" + this.breed +
                 "\", \"hungry\"=\"" + this.isHungry + "\"}\n";
@@ -66,31 +54,10 @@ public class Monkey extends Mammal {
     }
 
     public String eat() {
-        if(this.isHungry) {
+        if (this.isHungry) {
             return "is hungry and eats a banana";
         } else {
             return "is not hungry to eat";
         }
     }
-
-//    public void addMedicalNote(String pMedicalNote) {
-//        medicalHistory.add(pMedicalNote.toLowerCase());
-//    }
-//
-//    public void removeMedicalNote(String pMessage) {
-//        medicalHistory.remove(pMessage.toLowerCase());
-//    }
-//
-//    public String getMedicalRecord() {
-//        String medicalHistoryReturn = "";
-//        int i = 1;
-//        if (medicalHistory.isEmpty()) {
-//            medicalHistoryReturn = "No medical history found for " + this.name;
-//        }
-//        for (String medicalNote : medicalHistory) {
-//            medicalHistoryReturn += this.name + "'s" + " Medical Note " + i + ": " + medicalNote + "\n";
-//            i++;
-//        }
-//        return medicalHistoryReturn;
-//    }
 }

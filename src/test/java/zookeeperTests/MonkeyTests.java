@@ -3,8 +3,7 @@ package zookeeperTests;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java.time.LocalDate;
-import com.softwareinstitute.filmLibrary.zookeeper.Monkey;
+import com.softwareinstitute.zookeeper.Monkey;
 
 class MonkeyTests {
     @Test
@@ -21,23 +20,6 @@ class MonkeyTests {
         m.setName("Bobby");
         assertEquals("Bobby", m.getName(), "Incorrect name return");
     }
-
-//    @Test
-//    @DisplayName("Test of Add & Get Medical History")
-//    void testGetMedicalHistoryFish() {
-//        Monkey m = new Monkey();
-//        m.addMedicalNote("Allergic to fish");
-//        m.addMedicalNote("Testing");
-//        m.removeMedicalNote("Testing");
-//        assertEquals("Monke's Medical Note 1: allergic to fish\n", m.getMedicalRecord(), "Incorrect return of medical history");
-//    }
-
-//    @Test
-//    @DisplayName("Test of Get Medical History (If blank)")
-//    void testGetMedicalHistoryClear() {
-//        Monkey m = new Monkey("Monke", "Gorilla", true);
-//        assertEquals("No medical history found for " + m.getName() , m.getMedicalRecord(),"Medical History return incorrect");
-//    }
 
     @Test
     @DisplayName("Test of Set & Get Breed")

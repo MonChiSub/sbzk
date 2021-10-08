@@ -1,4 +1,4 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
+package com.softwareinstitute.zookeeper;
 
 public class Penguin extends Bird {
     //Variables
@@ -18,6 +18,7 @@ public class Penguin extends Bird {
     public Penguin(String pName, String pBreed) {
         this(pName, pBreed, 0);
     }
+
     public Penguin(String pName, String pBreed, int pAge) {
         this.name = pName;
         this.breed = pBreed;
@@ -56,7 +57,7 @@ public class Penguin extends Bird {
 
     @Override
     public String eat() {
-        if(age <= 12) {
+        if (age <= 12) {
             this.age += 1;
         }
         return this.name + " eats a fish";
@@ -64,7 +65,7 @@ public class Penguin extends Bird {
 
     public String squawk() {
         String squawk = "";
-        if(age >= 3) {
+        if (age >= 3) {
             squawk = "SQUAWK!!!";
         } else {
             squawk = "squawk...";

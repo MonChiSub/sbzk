@@ -1,9 +1,10 @@
-package com.softwareinstitute.filmLibrary.controller;
+package com.softwareinstitute.controller;
 
-import com.softwareinstitute.filmLibrary.zookeeper.Monkey;
 import com.google.gson.Gson;
-import com.softwareinstitute.filmLibrary.zookeeper.*;
+import com.softwareinstitute.now.zookeeper.*;
+import com.softwareinstitute.zookeeper.*;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -17,12 +18,12 @@ public class MainController {
         return zoo.toString();
     }
 
-    @RequestMapping(path="/monkeySelect", method=RequestMethod.GET)
+    @RequestMapping(path = "/monkeySelect", method = RequestMethod.GET)
     public String getMonkey() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
-        for(Animal a : listOfAnimals) {
-            if(a.getClass().getName().contains("Monkey")) {
+        for (Animal a : listOfAnimals) {
+            if (a.getClass().getName().contains("Monkey")) {
                 newListOfAnimals.add(a);
             }
         }
@@ -30,12 +31,12 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path="/owlSelect", method=RequestMethod.GET)
+    @RequestMapping(path = "/owlSelect", method = RequestMethod.GET)
     public String getOwl() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
-        for(Animal a : listOfAnimals) {
-            if(a.getClass().getName().contains("Owl")) {
+        for (Animal a : listOfAnimals) {
+            if (a.getClass().getName().contains("Owl")) {
                 newListOfAnimals.add(a);
             }
         }
@@ -43,12 +44,12 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path="/penguinSelect", method=RequestMethod.GET)
+    @RequestMapping(path = "/penguinSelect", method = RequestMethod.GET)
     public String getPenguin() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
-        for(Animal a : listOfAnimals) {
-            if(a.getClass().getName().contains("Penguin")) {
+        for (Animal a : listOfAnimals) {
+            if (a.getClass().getName().contains("Penguin")) {
                 newListOfAnimals.add(a);
             }
         }
@@ -56,7 +57,7 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path="/addMonkey", method=RequestMethod.POST)
+    @RequestMapping(path = "/addMonkey", method = RequestMethod.POST)
     public String addMonkey(String pName, String pBreed, String pIsHungry) {
         List<Animal> animals = zoo.getListOfAnimals();
         boolean isHungryBoolean = Boolean.parseBoolean(pIsHungry);
@@ -65,7 +66,7 @@ public class MainController {
         return newMonkey.toString();
     }
 
-    @RequestMapping(path="/addOwl", method=RequestMethod.POST)
+    @RequestMapping(path = "/addOwl", method = RequestMethod.POST)
     public String addOwl(String pName, String pBreed) {
         List<Animal> animals = zoo.getListOfAnimals();
         Owl newOwl = new Owl(pName, pBreed);
@@ -73,7 +74,7 @@ public class MainController {
         return newOwl.toString();
     }
 
-    @RequestMapping(path="/addPenguin", method=RequestMethod.POST)
+    @RequestMapping(path = "/addPenguin", method = RequestMethod.POST)
     public String addPenguin(String pName, String pBreed, String pAge) {
         List<Animal> animals = zoo.getListOfAnimals();
         int ageOfPenguin = Integer.parseInt(pAge);

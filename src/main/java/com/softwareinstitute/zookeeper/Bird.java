@@ -1,7 +1,7 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
+package com.softwareinstitute.zookeeper;
 
 public abstract class Bird extends Animal {
-    //Methods
+
     public String breathe(){
         return "Inhale... Exhale...";
     }

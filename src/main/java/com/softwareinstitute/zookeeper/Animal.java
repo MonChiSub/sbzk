@@ -1,14 +1,11 @@
-package com.softwareinstitute.filmLibrary.zookeeper;
+package com.softwareinstitute.zookeeper;
 
 public abstract class Animal {
-    //Variables
 
-    //Constructor
     public Animal() {
 
     }
 
-    //Methods
     public abstract String breathe();
 
     public abstract String eat();
