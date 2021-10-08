@@ -12,12 +12,13 @@ public class MainController {
 
     Zoo zoo = new Zoo();
 
+    //RequestMapping(path = "/createZoo", method = RequestMethod.GET)
     @GetMapping("/createZoo")
     public String createZoo() {
         return zoo.toString();
     }
 
-    @RequestMapping(path = "/monkeySelect", method = RequestMethod.GET)
+    @GetMapping("/monkeySelect")
     public String getMonkey() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -30,7 +31,7 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path = "/owlSelect", method = RequestMethod.GET)
+    @GetMapping("/owlSelect")
     public String getOwl() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -43,7 +44,7 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path = "/penguinSelect", method = RequestMethod.GET)
+    @GetMapping("/penguinSelect")
     public String getPenguin() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -56,7 +57,7 @@ public class MainController {
         return json;
     }
 
-    @RequestMapping(path = "/addMonkey", method = RequestMethod.POST)
+    @PostMapping("/addMonkey")
     public String addMonkey(String pName, String pBreed, String pIsHungry) {
         List<Animal> animals = zoo.getListOfAnimals();
         boolean isHungryBoolean = Boolean.parseBoolean(pIsHungry);
@@ -65,7 +66,7 @@ public class MainController {
         return newMonkey.toString();
     }
 
-    @RequestMapping(path = "/addOwl", method = RequestMethod.POST)
+    @PostMapping("/addOwl")
     public String addOwl(String pName, String pBreed) {
         List<Animal> animals = zoo.getListOfAnimals();
         Owl newOwl = new Owl(pName, pBreed);
@@ -73,7 +74,7 @@ public class MainController {
         return newOwl.toString();
     }
 
-    @RequestMapping(path = "/addPenguin", method = RequestMethod.POST)
+    @PostMapping("/addPenguin")
     public String addPenguin(String pName, String pBreed, String pAge) {
         List<Animal> animals = zoo.getListOfAnimals();
         int ageOfPenguin = Integer.parseInt(pAge);
