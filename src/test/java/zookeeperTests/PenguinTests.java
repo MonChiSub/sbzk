@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.softwareinstitute.zookeeper.Penguin;
 
-public class PenguinTests {
+class PenguinTests {
 
     @Test
     @DisplayName("Set and Get name test")
