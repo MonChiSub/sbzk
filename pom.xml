@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.softwareinstitute</groupId>
-	<artifactId>filmLibrary</artifactId>
+	<artifactId>sbzk</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>filmLibrary</name>
-	<description>Spring boot app of films</description>
+	<name>sbzk</name>
+	<description>Springboot app of zookeeper</description>
 
 	<properties>
 		<java.version>16</java.version>
