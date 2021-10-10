@@ -21,7 +21,7 @@ public class CucumberTests {
         testMonkey.setIsHungry(stringToBoolean);
     }
 
-    @When("monkey is hungry")
+    @When("monkey thinks he is hungry")
     public void monkeyGivenFood() {
         testMonkey.getIsHungry();
     }
