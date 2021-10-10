@@ -57,26 +57,50 @@ public class MainController {
     @PostMapping("/addMonkey")
     public String addMonkey(String pName, String pBreed, String pIsHungry) {
         List<Animal> animals = zoo.getListOfAnimals();
+        if(pName.isEmpty()) {
+            pName = "Harambe";
+        }
+        if(pBreed.isEmpty()) {
+            pBreed = "Bonbo";
+        }
+        if (pIsHungry.isEmpty()) {
+            pIsHungry = "true";
+        }
         boolean isHungryBoolean = Boolean.parseBoolean(pIsHungry);
         Monkey newMonkey = new Monkey(pName, pBreed, isHungryBoolean);
         animals.add(newMonkey);
-        return newMonkey.toString();
+        return "The following monkey has been added to the zoo: \n" + newMonkey.toString();
     }
 
     @PostMapping("/addOwl")
     public String addOwl(String pName, String pBreed) {
         List<Animal> animals = zoo.getListOfAnimals();
+        if(pName.isEmpty()) {
+            pName = "Twit";
+        }
+        if(pBreed.isEmpty()) {
+            pBreed = "Little Owl";
+        }
         Owl newOwl = new Owl(pName, pBreed);
         animals.add(newOwl);
-        return newOwl.toString();
+        return "The following owl has been added to the zoo: \n" + newOwl.toString();
     }
 
     @PostMapping("/addPenguin")
     public String addPenguin(String pName, String pBreed, String pAge) {
         List<Animal> animals = zoo.getListOfAnimals();
+        if(pName.isEmpty()) {
+            pName = "Pingu";
+        }
+        if(pBreed.isEmpty()) {
+            pBreed = "Fairy Penguin";
+        }
+        if(pAge.isEmpty()) {
+            pAge = "0";
+        }
         int ageOfPenguin = Integer.parseInt(pAge);
         Penguin newPenguin = new Penguin(pName, pBreed, ageOfPenguin);
         animals.add(newPenguin);
-        return newPenguin.toString();
+        return "The following penguin has been added to the zoo: \n" + newPenguin.toString();
     }
 }
