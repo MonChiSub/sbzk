@@ -10,5 +10,4 @@ class ZookeeperApplicationTests {
 	void contextLoads() {
 
 	}
-
 }

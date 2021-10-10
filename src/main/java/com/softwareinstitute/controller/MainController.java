@@ -13,8 +13,8 @@ public class MainController {
     Zoo zoo = new Zoo();
 
     //RequestMapping(path = "/createZoo", method = RequestMethod.GET)
-    @GetMapping("/createZoo")
-    public String createZoo() {
+    @GetMapping("/getZoo")
+    public String getZoo() {
         return zoo.toString();
     }
 
