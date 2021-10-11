@@ -76,7 +76,7 @@ public class MainController {
     public String addOwl(String pName, String pBreed) {
         List<Animal> animals = zoo.getListOfAnimals();
         if(pName.isEmpty()) {
-            pName = "Twit";
+            pName = "Tweety";
         }
         if(pBreed.isEmpty()) {
             pBreed = "Little Owl";

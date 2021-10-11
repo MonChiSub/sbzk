@@ -10,7 +10,7 @@ public class Zoo {
     public Zoo() {
         this.listOfAnimals.add(new Monkey("Bobo", "Capuchin", false));
         this.listOfAnimals.add(new Monkey("Zeniox", "Bonbo", true));
-        this.listOfAnimals.add(new Owl("Twit", "Little Owl"));
+        this.listOfAnimals.add(new Owl("Tweety", "Little Owl"));
         this.listOfAnimals.add(new Penguin("Pingu", "Fairy Penguin", 2));
     }
 

@@ -48,6 +48,4 @@ class MainControllerTests {
                 mainControllerTest.getPenguin(),
                 "Returned penguins incorreclty");
     }
-
-
 }
