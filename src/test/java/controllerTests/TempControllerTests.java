@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.softwareinstitute.controller.TempController;
 
-public class TempControllerTests {
+class TempControllerTests {
 
     TempController tempControllerTest = new TempController();
 
