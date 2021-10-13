@@ -25,9 +25,11 @@ class MainControllerTests {
     @DisplayName("Get monkeys test")
     void getAddMonkey() {
         mainControllerTest.addMonkey("addMonkeyTestName","addMonkeyTestBreed","true");
+        mainControllerTest.addMonkey("","","");
         assertEquals( "[{\"name\":\"Bobo\",\"breed\":\"Capuchin\",\"isHungry\":false}," +
                         "{\"name\":\"Zeniox\",\"breed\":\"Bonbo\",\"isHungry\":true}," +
-                        "{\"name\":\"addMonkeyTestName\",\"breed\":\"addMonkeyTestBreed\",\"isHungry\":true}]",
+                        "{\"name\":\"addMonkeyTestName\",\"breed\":\"addMonkeyTestBreed\",\"isHungry\":true}," +
+                        "{\"name\":\"Harambe\",\"breed\":\"Bonbo\",\"isHungry\":true}]",
                 mainControllerTest.getMonkey(),
                 "Returned monkeys incorrectly.");
     }
@@ -36,6 +38,7 @@ class MainControllerTests {
     @DisplayName("Get Owls Test")
     void GetAddOwl() {
         mainControllerTest.addOwl("addOwlTestName","addOwlTestBreed");
+        mainControllerTest.addOwl("","");
         assertEquals(true,
                 mainControllerTest.getOwl().contains("Tweety") && mainControllerTest.getOwl().contains("Little Owl")
                         &&
@@ -47,8 +50,10 @@ class MainControllerTests {
     @DisplayName("Get penguins test")
     void GetAddPenguin() {
         mainControllerTest.addPenguin("addPenguinTestName","addPenguinTestBreed","4");
+        mainControllerTest.addPenguin("","","");
         assertEquals("[{\"name\":\"Pingu\",\"breed\":\"Fairy Penguin\",\"age\":2}," +
-                        "{\"name\":\"addPenguinTestName\",\"breed\":\"addPenguinTestBreed\",\"age\":4}]",
+                        "{\"name\":\"addPenguinTestName\",\"breed\":\"addPenguinTestBreed\",\"age\":4}," +
+                        "{\"name\":\"Pingu\",\"breed\":\"Fairy Penguin\",\"age\":0}]",
                 mainControllerTest.getPenguin(),
                 "Returned penguins incorreclty");
     }
