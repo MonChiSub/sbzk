@@ -12,8 +12,12 @@ class MainControllerTests {
     @Test
     @DisplayName("Get Zoo Test")
     void getZoo() {
-        assertEquals(mainControllerTest.getZoo(),
-                mainControllerTest.getZoo(),
+        assertEquals(true,
+                mainControllerTest.getZoo().contains("[{\"name\":\"Bobo\",\"breed\":\"Capuchin\",\"isHungry\":false},")
+                        && mainControllerTest.getZoo().contains("{\"name\":\"Zeniox\",\"breed\":\"Bonbo\",\"isHungry\":true},")
+                        && mainControllerTest.getZoo().contains("{\"name\":\"Tweety\",\"breed\":\"Little Owl\",\"flyEnergy\":")
+                        && mainControllerTest.getZoo().contains(",\"canFly\":")
+                        && mainControllerTest.getZoo().contains("{\"name\":\"Pingu\",\"breed\":\"Fairy Penguin\",\"age\":2}]"),
                 "Returned the whole zoo incorrectly.");
     }
 
@@ -33,7 +37,7 @@ class MainControllerTests {
     void GetAddOwl() {
         mainControllerTest.addOwl("addOwlTestName","addOwlTestBreed");
         assertEquals(true,
-                mainControllerTest.getOwl().contains("Twit") && mainControllerTest.getOwl().contains("Little Owl")
+                mainControllerTest.getOwl().contains("Tweety") && mainControllerTest.getOwl().contains("Little Owl")
                         &&
                         mainControllerTest.getOwl().contains("addOwlTestName") && mainControllerTest.getOwl().contains("addOwlTestBreed"),
                 "Returned owls incorrectly.");
