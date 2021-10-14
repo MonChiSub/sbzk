@@ -7,7 +7,7 @@ import com.softwareinstitute.controller.MainController;
 
 class MainControllerTests {
 
-    MainController mainControllerTest = new MainController();
+    private MainController mainControllerTest = new MainController();
 
     @Test
     @DisplayName("Get Zoo Test")
