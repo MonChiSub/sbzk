@@ -12,13 +12,13 @@ public class MainController {
 
     Zoo zoo = new Zoo();
 
-    //RequestMapping(path = "/createZoo", method = RequestMethod.GET)
     @GetMapping("/getZoo")
     public String getZoo() {
         return zoo.toString();
     }
 
     @GetMapping("/monkeySelect")
+    @CrossOrigin("http://localhost:3000")
     public String getMonkey() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -31,6 +31,7 @@ public class MainController {
     }
 
     @GetMapping("/owlSelect")
+    @CrossOrigin("http://localhost:3000")
     public String getOwl() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -43,6 +44,7 @@ public class MainController {
     }
 
     @GetMapping("/penguinSelect")
+    @CrossOrigin("http://localhost:3000")
     public String getPenguin() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
