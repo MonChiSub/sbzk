@@ -6,19 +6,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class MainController {
 
     Zoo zoo = new Zoo();
 
     @GetMapping("/getZoo")
+    @CrossOrigin("http://localhost:3000/getZoo")
     public String getZoo() {
         return zoo.toString();
     }
 
     @GetMapping("/monkeySelect")
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:3000/monkeySelect")
     public String getMonkey() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -31,7 +34,7 @@ public class MainController {
     }
 
     @GetMapping("/owlSelect")
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:3000/owlSelect")
     public String getOwl() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -44,7 +47,7 @@ public class MainController {
     }
 
     @GetMapping("/penguinSelect")
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:3000/penguinSelect")
     public String getPenguin() {
         List<Animal> listOfAnimals = zoo.getListOfAnimals();
         List<Animal> newListOfAnimals = new ArrayList<>();
@@ -98,6 +101,10 @@ public class MainController {
             pBreed = "Fairy Penguin";
         }
         if(pAge.isEmpty()) {
+            pAge = "0";
+        }
+        //if(Pattern.matches("[a-zA-Z\\s']+", pAge) == true) { --> i was an idiot here and commented this out so I can always see the stupidity / pain.
+        if(Pattern.matches("[0-9]+", pAge) == false) {
             pAge = "0";
         }
         int ageOfPenguin = Integer.parseInt(pAge);
