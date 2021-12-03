@@ -5,6 +5,7 @@ public class Monkey extends Mammal {
     private String name;
     private String breed;
     private boolean isHungry;
+    private String animalType;
 
     public Monkey() {
         this("Monke");
@@ -22,6 +23,7 @@ public class Monkey extends Mammal {
         this.name = pName;
         this.breed = pBreed;
         this.isHungry = hungry;
+        this.animalType = "Monkey";
     }
 
     public String toString() {
@@ -51,6 +53,11 @@ public class Monkey extends Mammal {
 
     public void setIsHungry(boolean pIsHungry) {
         this.isHungry = pIsHungry;
+    }
+
+    @Override
+    public String getAnimalType() {
+        return animalType;
     }
 
     @Override

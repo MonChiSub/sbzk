@@ -1,21 +1,25 @@
-//package selenium;
-//
-//import org.junit.Test;
-//import org.junit.Before;
-//import org.junit.After;
-//import org.junit.jupiter.api.DisplayName;
-//import org.openqa.selenium.*;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-//
-//public class SeleniumMainTests {
+package selenium;
+
+import org.junit.Test;
+import org.junit.Before;
+import org.junit.After;
+import org.junit.jupiter.api.DisplayName;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class SeleniumMainTests {
 //
 //    private WebDriver driver;
 //
 //    @Before
 //    public void setUp() {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\patri\\documents\\chromedriver.exe");
-//        driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setHeadless(true);
+//        driver = new ChromeDriver(chromeOptions);
 //    }
 //
 //    @After
@@ -34,13 +38,13 @@
 //        driver.findElement(By.id("pBreedMonkey")).sendKeys("testBreedMonkey");
 //        driver.findElement(By.id("pIsHungryMonkey")).sendKeys("true");
 //        driver.findElement(By.cssSelector("#addingAMonkey > button")).click();
-////        Thread.sleep(500);
-////        WebElement monkeyReturn = driver.findElement(By.xpath("/html/body/text()"));
-////        String monkeyReturnString = monkeyReturn.getText();
-////        assertEquals("The following monkey has been added to the zoo: " +
-////                "{\"name\"=  \"testNameMonkey\", \"breed\"=\"testBreedMonkey\", \"hungry\"=\"true\"}",
-////                monkeyReturnString,
-////                "The return statement is incorrect.");
+//        Thread.sleep(500);
+//        WebElement monkeyReturn = driver.findElement(By.xpath("/html/body/text()"));
+//        String monkeyReturnString = monkeyReturn.getText();
+//        assertEquals("The following monkey has been added to the zoo: " +
+//                "{\"name\"=  \"testNameMonkey\", \"breed\"=\"testBreedMonkey\", \"hungry\"=\"true\"}",
+//                monkeyReturnString,
+//                "The return statement is incorrect.");
 //    }
 //
 //    @Test
@@ -97,4 +101,4 @@
 //        driver.manage().window().maximize();
 //        driver.findElement(By.cssSelector("#penguinGetTestYoHaHaHaHa > button")).click();
 //    }
-//}
+}

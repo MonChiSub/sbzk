@@ -6,6 +6,10 @@ public abstract class Animal {
 
     }
 
+    public abstract String getAnimalType();
+
+    public abstract String getName();
+
     public abstract String breathe();
 
     public abstract String eat();

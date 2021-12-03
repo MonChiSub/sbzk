@@ -8,6 +8,7 @@ public class Owl extends Bird {
     private String breed;
     private int flyEnergy;
     private boolean canFly = false;
+    private String animalType;
 
     public Owl() {
         this("Bert");
@@ -24,6 +25,7 @@ public class Owl extends Bird {
         this.name = pName;
         this.breed = pBreed;
         canFly();
+        this.animalType = "Owl";
     }
 
     public Owl(String pName, String pBreed, int pFlyEnergy) {
@@ -31,6 +33,7 @@ public class Owl extends Bird {
         this.breed = pBreed;
         this.flyEnergy = pFlyEnergy;
         canFly();
+        this.animalType = "Owl";
     }
 
     public String toString() {
@@ -78,6 +81,11 @@ public class Owl extends Bird {
             this.canFly = false;
         }
         return canFly;
+    }
+
+    @Override
+    public String getAnimalType() {
+        return animalType;
     }
 
     public String fly() {

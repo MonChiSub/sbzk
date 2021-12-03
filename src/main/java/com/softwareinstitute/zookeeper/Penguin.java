@@ -5,6 +5,7 @@ public class Penguin extends Bird {
     private String name;
     private String breed;
     private int age;
+    private String animalType;
 
     //Constructors
     public Penguin() {
@@ -12,7 +13,7 @@ public class Penguin extends Bird {
     }
 
     public Penguin(String pName) {
-        this(pName, "Fairy Penguin");
+        this(pName, "Unknown Breed");
     }
 
     public Penguin(String pName, String pBreed) {
@@ -23,6 +24,7 @@ public class Penguin extends Bird {
         this.name = pName;
         this.breed = pBreed;
         this.age = pAge;
+        this.animalType = "Penguin";
     }
 
     //Methods
@@ -53,6 +55,11 @@ public class Penguin extends Bird {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String getAnimalType() {
+        return animalType;
     }
 
     @Override
