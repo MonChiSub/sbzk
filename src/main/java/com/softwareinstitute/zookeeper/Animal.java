@@ -1,9 +1,13 @@
 package com.softwareinstitute.zookeeper;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public abstract class Animal {
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private final int animalID;
 
-    protected Animal() {
-
+    public Animal() {
+        animalID = count.getAndIncrement();
     }
 
     public abstract String getAnimalType();
@@ -22,5 +26,9 @@ public abstract class Animal {
 
     public String die() {
         return "i have died.";
+    }
+
+    public int getUniqueID() {
+        return animalID;
     }
 }

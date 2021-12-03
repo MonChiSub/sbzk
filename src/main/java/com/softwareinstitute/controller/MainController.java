@@ -66,27 +66,24 @@ public class MainController {
     @PostMapping("/addMonkey")
     public ResponseEntity<Monkey> addMonkey(@RequestBody Monkey newMonkey) {
         List<Animal> animals = zoo.getListOfAnimals();
-        Monkey addMonkey = new Monkey(newMonkey.getName(), newMonkey.getBreed(), newMonkey.getIsHungry());
-        animals.add(addMonkey);
-        return new ResponseEntity<Monkey>(addMonkey, HttpStatus.OK);
+        animals.add(newMonkey);
+        return new ResponseEntity<Monkey>(newMonkey, HttpStatus.OK);
     }
 
     @CrossOrigin("http://localhost:3000")
     @PostMapping("/addOwl")
     public ResponseEntity<Owl> addOwl(@RequestBody Owl newOwl) {
         List<Animal> animals = zoo.getListOfAnimals();
-        Owl addOwl = new Owl(newOwl.getName(), newOwl.getBreed());
-        animals.add(addOwl);
-        return new ResponseEntity<Owl>(addOwl, HttpStatus.OK);
+        animals.add(newOwl);
+        return new ResponseEntity<Owl>(newOwl, HttpStatus.OK);
     }
 
     @CrossOrigin("http://localhost:3000")
     @PostMapping("/addPenguin")
     public ResponseEntity<Penguin> addPenguin(@RequestBody Penguin newPenguin) {
         List<Animal> animals = zoo.getListOfAnimals();
-        Penguin addPenguin = new Penguin(newPenguin.getName(), newPenguin.getBreed(), newPenguin.getAge());
-        animals.add(addPenguin);
-        return new ResponseEntity<Penguin>(addPenguin, HttpStatus.OK);
+        animals.add(newPenguin);
+        return new ResponseEntity<Penguin>(newPenguin, HttpStatus.OK);
     }
 
     @CrossOrigin("http://localhost:3000")
@@ -120,10 +117,10 @@ public class MainController {
     }
 
     @CrossOrigin("http://localhost:3000")
-    @DeleteMapping("/removeAnimal/{pName}")
-    public ResponseEntity removeAnimal(@PathVariable String pName) {
+    @DeleteMapping("/removeAnimal/{pID}")
+    public ResponseEntity removeAnimal(@PathVariable int pID) {
         List<Animal> animals = zoo.getListOfAnimals();
-        animals.removeIf(animalItem -> animalItem.getName().equals(pName));
+        animals.removeIf(animalItem -> animalItem.getUniqueID() == pID);
         return ResponseEntity.ok().build();
     }
 }
